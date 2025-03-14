@@ -1,1 +1,0 @@
-https://github.com/572jv/zakrivayuschiy-teg-f
