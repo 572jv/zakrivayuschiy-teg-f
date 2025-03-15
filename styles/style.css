@@ -151,7 +151,7 @@
 .card__info {
   border: var(--border);
   border-top: 0;
-  padding: 29px 24px;
+  padding: 13px 24px;
 }
 
 .card__text {
@@ -163,13 +163,13 @@
 }
 
 .card__text:last-of-type {
-  margin-bottom: 25px;
+  margin-bottom: 31px;
 }
 
 .card__btns {
   display: flex;
   justify-content: end;
-  gap: 5px;
+  /* gap: 5px; */
 }
 
 .card__icon-button .core {
@@ -179,6 +179,7 @@
 
 .card__icon-button:hover .core {
   fill: var(--contour-color);
+  transition: fill 0.3s linear 0s;
 }
 
 .card__icon-button .main-body {
@@ -193,10 +194,12 @@
 
 .card__icon-button:active .core {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0s;
 }
 
 .card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
@@ -239,13 +242,14 @@
   position: relative;
   overflow: hidden;
   min-inline-size: 130px;
-  min-block-size: 38px;
+  /* min-block-size: 38px; */
   font-family: var(--second-font);
   /* font-weight: var(--font-weight-text); */
   font-size: var(--btn-text-size);
   line-height: 90%;
   border: var(--border);
   font-variation-settings: "wght" var(--font-weight-text);
+  margin-bottom: 10px;
 }
 
 .button svg {
@@ -309,6 +313,7 @@
   cursor: pointer;
   /* border: 2px transparent solid; */
   transition: border-color 0.3s ease;
+  padding: 5px;
 }
 
 .card__icon-button:focus {
@@ -318,7 +323,6 @@
 .card__icon-button:focus-visible {
   outline: none;
   border: var(--border);
-  
 }
 
 .save-button__wrapper {
@@ -336,10 +340,11 @@
   gap: 8px;
 }
 
-
 .dialog {
   min-inline-size: 357px;
-  min-block-size: 191px;
+  /* display: flex;
+  flex-direction: column; */
+  /* min-block-size: 191px; */
 }
 
 .dialog [open] {
@@ -354,6 +359,7 @@
 .dialog-button__wrapper {
   display: flex;
   gap: 20px;
+  padding: 12px;
 }
 
 .dialog-button__wrapper svg {
@@ -368,7 +374,10 @@
   height: 100%;
   background-color: transparent;
   border: var(--border);
-  margin-top: 30px;
+  margin-top: 18px;
+  /* margin-bottom: 20px; */
+  padding: 7px;
+  align-self: center;
 }
 
 .dialog__text {
@@ -407,11 +416,26 @@
   .button svg {
     inline-size: 28px;
     block-size: 28px;
+    margin: 0;
   }
 
   .dialog {
-    min-block-size: 191px;
+    /* min-block-size: 191px; */
     min-inline-size: 341px;
+    gap: 20px;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dialog-button__wrapper {
+    justify-content: end;
+  }
+
+  .dialog__button {
+    padding: 12px;
+    inline-size: 100%;
+    margin: 0;
   }
 }
 
