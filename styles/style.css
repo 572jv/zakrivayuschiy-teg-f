@@ -57,7 +57,7 @@
   max-width: 696px;
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 50px;
   position: relative;
 }
 
@@ -70,7 +70,7 @@
   font-size: var(--text-size);
   line-height: 100%;
   font-family: var(--main-font);
-  padding: 7px 10px;
+  padding: 8px 9px;
   border: var(--border);
   border-bottom: 0px;
 }
@@ -151,7 +151,7 @@
 .card__info {
   border: var(--border);
   border-top: 0;
-  padding: 13px 24px;
+  padding: 27px 24px 13px;
 }
 
 .card__text {
@@ -163,7 +163,7 @@
 }
 
 .card__text:last-of-type {
-  margin-bottom: 31px;
+  margin-bottom: 25px;
 }
 
 .card__btns {
@@ -338,6 +338,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  padding-inline: 0;
 }
 
 .dialog {
@@ -395,11 +396,13 @@
 
 @media (max-width: 375px) {
   .header {
-    padding: 121px 0;
+    padding: 120px 0;
+    margin: 100px 0 99px;
   }
 
   .card__title {
-    padding: 7px 2px;
+    padding: 7px 10px 4px;
+    line-height: 113%;
   }
 
   .card__label {
@@ -408,9 +411,14 @@
 
   .cards__btn {
     flex-direction: column;
-    min-inline-size: 306px;
+    min-inline-size: 310px;
     min-block-size: 84px;
     justify-content: center;
+  }
+
+  .card__icon-button {
+    padding: 4px 5px;
+    margin-right: 2px;
   }
 
   .button svg {
@@ -420,22 +428,26 @@
   }
 
   .dialog {
-    /* min-block-size: 191px; */
     min-inline-size: 341px;
     gap: 20px;
-    padding: 25px 10px;
-    display: flex;
     flex-direction: column;
+    padding: 30px 0px;
   }
 
   .dialog-button__wrapper {
     justify-content: end;
+    padding-top: 10px;
+    padding-left: 42px;
+  }
+
+  .dialog-button__wrapper svg {
+    flex-shrink: 0;
   }
 
   .dialog__button {
-    padding: 12px;
-    inline-size: 100%;
-    margin: 0;
+    inline-size: calc(100% - 42px * 2);
+    margin: 13px 42px 0 42px;
+    padding: 9px 0;
   }
 }
 
